@@ -14,7 +14,6 @@ COPY . .
 
 RUN CFLAGS="-DCCORD_SIGINTCATCH -DCCORD_DEBUG_HTTP" make
 
-RUN make shared && \
-	make voice
+RUN make voice
 
 RUN make install
