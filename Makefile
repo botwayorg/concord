@@ -53,6 +53,10 @@ uninstall:
 docs:
 	@ $(MAKE) -C $(GENCODECS_DIR) headers
 
+docker-publish:
+	docker build -t botwayorg/concord .
+	docker push botwayorg/concord
+
 echo:
 	@ echo -e 'CC: $(CC)\n'
 	@ echo -e 'PREFIX: $(PREFIX)\n'
