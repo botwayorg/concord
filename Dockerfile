@@ -5,8 +5,7 @@ ENV PACKAGES "build-dependencies build-base curl curl-dev bash openssl openssl-d
 RUN apk update && \
 	apk add --no-cache --virtual ${PACKAGES}
 
-# Add packages you want
-# RUN apk add PACKAGE_NAME
+RUN mkdir /root/.botway
 
 WORKDIR /usr/src/concord
 
